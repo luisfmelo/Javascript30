@@ -1,10 +1,10 @@
-window.addEventListener('keydown', playSound);
-
 //  select all keys
 const keys = document.querySelectorAll('.key');
 
 // for each key, when transition end... call removeTransition() function
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playSound);
 
 
 
