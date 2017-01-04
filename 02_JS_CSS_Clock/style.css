@@ -1,0 +1,119 @@
+html {
+  background: #222;/*#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);*/
+  background-size:cover;
+  font-family:'helvetica neue';
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  display:flex;
+  flex:1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border:20px solid white;
+  border-radius:50%;
+  margin:50px auto;
+  position: relative;
+  padding:2rem;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width:50%;
+  height:6px;
+  background:black;
+  position: absolute;
+  top:50%;
+  transform-origin: 100%; /* rotation center on the edge*/
+  transform: rotate(90deg); /* start at 12 o'clock */
+  /*transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.08, 2, 1, 1);*/
+  opacity: 0.4;
+}
+
+.min-hand{
+  background: blue;
+  width: 40%;
+  left: 10%;
+  z-index: 2;
+}
+.hour-hand {
+  background: green;
+  width: 30%;
+  left: 20%;
+  z-index: 3;
+}
+
+span{
+  font-size: 30px;
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  color: white;
+}
+
+.n12{
+  left: 45%;
+}
+.n11{
+  left: 25%;
+  top: 5%;
+}
+.n10{
+  left: 5%;
+  top: 25%;
+}
+.n9{
+  left: 0%;
+  top: 45%;
+}
+.n8{
+  left: 5%;
+  top: 70%;
+}
+.n7{
+  left: 25%;
+  top: 85%;
+}
+.n6{
+  left: 45%;
+  top: 90%;
+}
+.n5{
+    left: 70%;
+    top: 85%;
+}
+.n4{
+    left: 85%;
+    top: 70%;
+}
+.n3{
+  left: 90%;
+  top: 45%;
+}
+.n2{
+  left: 85%;
+  top: 25%;
+}
+.n1{
+  left: 70%;
+  top: 5%;
+}
