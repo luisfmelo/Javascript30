@@ -2,22 +2,27 @@
 it may be useful to know that :root actually has a higher specificity.
 Pseudo-class selectors (but not pseudo-elements) have a specificity equal to
 that of a class, which is higher than a basic element selector.*/
+
+
 /* Aqui meto as minhas variaveis */
-:root{
-  --base: #ffc600; /* -- it's equal to $ in SASS */
-  --spacing: 10px;
-  --blur: 0px;
+
+:root {
+    --base: #ffc600;
+    /* -- it's equal to $ in SASS */
+    --spacing: 10px;
+    --blur: 0px;
 }
 
-img{
-  padding: var(--spacing);
-  background: var(--base);
-  filter: blur(var(--blur));
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
 }
 
-.h1{
-  color: var(--base)
+.h1 {
+    color: var(--base)
 }
+
 
 /*
   misc styles, nothing to do with CSS variables

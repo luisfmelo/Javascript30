@@ -22,15 +22,68 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
+// we pass a function (like for Each inventor in inventors)
+// for each inventor, if the function return true... it will keep him
+  /*
+    const fifteen = inventors.filter(function (inventor){
+      return (inventor.year >= 1500 && inventor.year < 1600);
+    });
+  */
+//ES6
+const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600)
+console.table(fifteen); // pro tip: display Object as Table
+
+/*****************************************************************************/
+
+
 
 // Array.prototype.map()
-// 2. Give us an array of the inventors' first and last names
+// 2. Give us an array of the inventors' first and last
+  /*
+    const firstANDlast = inventors.map(function(inventor){
+      return inventor.first + ' ' + inventor.last;
+    });
+  */
+const firstANDlast = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
+console.table(firstANDlast);
+
+/*****************************************************************************/
+
+
+
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+// a and b are two consecutive persons. Then I return the sort rule
+  /*
+    const sortedByBirthday = inventors.sort(function(a,b){
+      return a.year > b.year ? 1 : -1;
+    });
+    */
+const sortedByBirthday = inventors.sort((a, b) => a.year > b.year ? 1 : -1)
+console.table(sortedByBirthday);
+
+/*****************************************************************************/
+
+
+
+
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
+// it's like a map but it only return 1 value (it is about all the inventor)
+// 1st variable is the common one... the second is an element of array 
+const totalYears = inventors.reduce(function(total, inventor){
+  return total + (inventor.passed - inventor.year);
+}, 0);
+
+console.log(totalYears);
+
+/*****************************************************************************/
+
+
+
+
 
 // 5. Sort the inventors by years lived
 
